@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3, os
 from datetime import date, timedelta
 from functools import wraps
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = "budget_secret_key_2024"
