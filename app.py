@@ -204,7 +204,7 @@ def update_settings():
         db.execute("UPDATE users SET weekly_budget=? WHERE id=?", (weekly, session["user_id"]))
     return jsonify({"ok": True})
 
-if __name__ == '__main__':
-    init_db()
-    app.run(debug=True, port=5000)
+init_db()
 
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
